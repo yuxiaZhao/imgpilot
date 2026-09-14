@@ -1,2 +1,14 @@
 export * from "./types";
 export * from "./utils";
+export * from "./crop";
+export * from "./resize";
+export * from "./rotate";
+export * from "./filter";
+export * from "./watermark";
+export * from "./metadata";
+export * from "./compress";
+export * from "./convert";
+export * from "./exif";
+export * from "./zip";
+export * from "./adapter";
+export { Pipeline, imgpilot, imgkitBatch } from "./pipeline";

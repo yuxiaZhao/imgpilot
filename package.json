@@ -1,5 +1,6 @@
 {
-  "name": "imgkit",
+  "name": "imgpilot",
+  "author": "zhaoyuxia<yuxia__zhao@163.com>",
   "version": "0.1.0",
   "description": "前端图片处理工具库",
   "type": "module",
@@ -13,14 +14,23 @@
       "require": "./dist/index.cjs"
     }
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yuxiaZhao/imgpilot.git"
+  },
   "files": [
     "dist"
   ],
   "scripts": {
     "dev": "tsup --watch",
     "build": "tsup",
-    "start": "npx serve demo -l 3000",
-    "preview": "npx serve demo -l 8080",
+    "dev:demo": "vite --port 3000",
+    "build:demo": "vite build",
+    "start": "vite --port 3000",
+    "dev:docs": "vitepress dev docs",
+    "build:docs": "vitepress build docs",
+    "preview:docs": "vitepress preview docs",
+    "preview": "vite preview --port 8080",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
@@ -38,8 +48,10 @@
     "watermark",
     "filter"
   ],
+  "private": false,
   "license": "MIT",
   "devDependencies": {
+    "@playwright/test": "^1.63.0",
     "@typescript-eslint/eslint-plugin": "^7.0.0",
     "@typescript-eslint/parser": "^7.0.0",
     "@vitest/coverage-v8": "^1.6.0",
@@ -48,6 +60,8 @@
     "prettier": "^3.2.0",
     "tsup": "^8.0.0",
     "typescript": "^5.4.0",
+    "vite": "^5.4.21",
+    "vitepress": "^1.6.4",
     "vitest": "^1.6.0"
   }
 }
